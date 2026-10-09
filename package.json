@@ -1,0 +1,28 @@
+{
+	"name": "intermediate-astro-decap-cms-starter-kit",
+	"type": "module",
+	"version": "3.1.0",
+	"scripts": {
+		"rodar": "astro build & astro dev",
+		"astro": "astro dev",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"remove-decap": "node scripts/remove-decap.js",
+		"remove-demo": "node scripts/remove-demo.js",
+		"remove-dark-mode": "node scripts/remove-dark-mode.js"
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "^3.7.3",
+		"@tailwindcss/vite": "^4.3.3",
+		"astro": "^6.1.10",
+		"astro-icon": "^1.1.5",
+		"autoprefixer": "^10.5.0",
+		"less": "^4.6.4",
+		"tailwindcss": "^4.3.3"
+	},
+	"devDependencies": {
+		"netlify-plugin-cache": "^1.0.3"
+	}
+}

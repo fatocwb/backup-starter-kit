@@ -1,0 +1,63 @@
+.
+├── .tours/                     # Interactive CodeTour guides
+│   ├── getting-started.json
+│   ├── component-composition.json
+│   ├── decap-cms-blog-setup.json
+│   ├── image-optimization.json
+│   ├── navigation-system.json
+│   ├── styling-dark-mode.json
+│   ├── content-collections.json
+│   └── deployment-checklist.json
+├── public/                     # Static assets (unprocessed)
+│   ├── admin/
+│   │   └── config.yml          # Decap CMS configuration
+│   ├── assets/
+│   │   ├── favicons/
+│   │   ├── fonts/
+│   │   └── images/             # Static images (unoptimized)
+│   ├── _redirects
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   └── images/             # Optimized by Astro
+│   │       └── blog/
+│   ├── components/             # Component-per-folder pattern
+│   │   ├── Banner/
+│   │   │   └── Banner.astro
+│   │   ├── CTA/
+│   │   │   ├── CTASimple.astro
+│   │   │   └── CTAArtDirection.astro
+│   │   ├── Header/             # Dual header system
+│   │   │   ├── DynamicHeader.astro  # Default (data-driven)
+│   │   │   └── StaticHeader.astro   # Alternative (hardcoded)
+│   │   ├── Hero/
+│   │   │   └── Hero.astro
+│   │   ├── Meta/               # SEO component
+│   │   │   └── Meta.astro
+│   │   └── ...
+│   ├── content/
+│   │   └── blog/
+│   ├── content.config.ts
+│   ├── data/                   # Site configuration
+│   │   ├── client.ts           # Business & site data
+│   │   └── navData.json        # Navigation structure
+│   ├── icons/                  # SVGs for Icon component
+│   ├── js/
+│   │   ├── blogPostingSchema.js   # BlogPosting JSON-LD
+│   │   ├── localBusinessSchema.js # LocalBusiness JSON-LD
+│   │   ├── nav.js
+│   │   └── utils.js
+│   ├── layouts/
+│   │   ├── BaseLayout.astro
+│   │   ├── BlogPostLayout.astro
+│   │   └── ...
+│   ├── pages/
+│   │   ├── blog/
+│   │   ├── projects/
+│   │   └── ...
+│   └── styles/
+│       ├── root.less           # Base styles
+│   │   └── ...
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json

@@ -1,0 +1,10 @@
+---
+//Componente Autor.astro
+
+//Astro.props é um objeto contendo tudo o que foi enviado ao componente.
+const {avatar, name} = Astro.props;
+---
+
+<div>
+    <img src={avatar} alt={name} />
+</div>

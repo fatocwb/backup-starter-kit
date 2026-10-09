@@ -1,0 +1,17 @@
+---
+import Author from "./Author.astro";
+
+////Astro.props é um objeto contendo tudo o que foi enviado ao componente.
+const {dados} = Astro.props;
+
+---
+
+<article>
+  <!-- <img src={dados.avatar} alt={dados.name} /> -->
+   <Author avatar={dados.avatar} name={dados.name} />
+  <div class="content">
+    <p class="badge">{dados.name}</p>
+    <p class="title">{dados.age}</p>
+    <p class="description">{dados.hobbies}</p>
+  </div>
+</article>

@@ -1,0 +1,71 @@
+---
+//utils
+import "../styles/global.css";
+
+//components
+import Link from "../components/Link/Link.astro";
+
+const {title} = Astro.props;
+
+
+const obj ={
+	name: "Adalberto",
+	age: "54",
+	profession: "Engineer",
+	address: {
+		rua: "Rua 1",
+		numero: "218",
+		bairro: "Centro",
+	},
+};
+
+const person_array = ["joao", "maria", "pedro", "ana", "jose", "lucas"];
+
+
+import people from "../data/people.json";
+import {SITE} from "../data/client.ts";
+
+const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+const data = await res.json(); 
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{title}</title>
+</head>
+<body>
+
+	<nav class="flex gap-4 align-middle self-center">
+		<Link href="/">Home</Link>
+		<Link href="/about">About</Link>
+		<li><a>Contact</a></li>
+		<li><a>Services</a></li>
+    </nav>
+
+	<main>
+	  <slot></slot>
+	</main>  
+ 
+  <!-- { person_array.map( (person1) => {
+    return <p>{person1}</p>}
+     )} -->
+
+
+    <!-- {people.map( (people2) => { 
+    return <p>{people2.name}</p>
+    <p>{people2.age.toString()}</p>
+    } )} --> 
+
+
+  <!-- {data.id} -->
+   <!--{people.name}-->
+    
+
+
+
+</body>
+</html>

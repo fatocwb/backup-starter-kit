@@ -1,0 +1,37 @@
+---
+// Utils
+import { getImage } from "astro:assets";
+
+// Components
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import SideBySide from "@components/SideBySide/SideBySide.astro";
+import SideBySideReverse from "@components/SideBySideReverse/SideBySideReverse.astro";
+import Gallery from "@components/Gallery/Gallery.astro";
+import Testimonials from "@components/Testimonials/Testimonials.astro";
+import Evento from "@components/Evento/Evento.astro";
+import Evento2 from "@components/Evento2/Evento2.astro";
+import Service from "@components/Service/Service.astro";
+import FAQ from "@components/FAQ/FAQ.astro";
+import CTASimple from "@components/CTA/CTASimple.astro";
+
+//dados
+import { SITE } from "@data/client";
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Banner (for rendering)
+import heroImage from "@assets/images/hero/hero.jpg";
+const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
+---
+
+<BaseLayout title="{SITE.title}" description="{SITE.description}" heroImage={optimizedHeroImage}>
+	<Hero image={optimizedHeroImage} />
+	<SideBySide />
+	<SideBySideReverse />
+	<Gallery />
+	<Testimonials />
+	<Evento />
+	<Evento2 />
+	<FAQ />
+	<Service />
+	<CTASimple />
+</BaseLayout>
