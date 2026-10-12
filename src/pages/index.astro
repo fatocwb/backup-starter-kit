@@ -23,7 +23,7 @@ import heroImage from "@assets/images/hero/hero.jpg";
 const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
 ---
 
-<BaseLayout title="{SITE.title}" description="{SITE.description}" heroImage={optimizedHeroImage}>
+<BaseLayout title="Pixel Perfect Websites" description="Meta description for the page" heroImage={optimizedHeroImage}>
 	<Hero image={optimizedHeroImage} />
 	<SideBySide />
 	<SideBySideReverse />

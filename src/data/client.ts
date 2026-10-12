@@ -10,14 +10,17 @@ export const SITE = {
 
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
+	name: SITE.title,
 	empresa: "Premusi",
 	email: "premussipremoldados@gmail.com",
-	whatsApp: "5541984833158",
-	whatsAppUrl: "https://wa.me/5541984833158",
+	phoneForTel: "555-779-4407",
 	phoneFormatted: "(41) 98483-3158",
+	whatsApp: "41 98483-3158",
+	whatsAppUrl: "https://wa.me/5541984833158",
 	logo: "/images/logos/logo.png",
 	address: {
 		lineOne: "R. Paulino Ferreira Belo",
+		lineTwo: "Second Address Line",
 		city: "Guatupê",
 		state: "PR",
 		zip: "83060-470",

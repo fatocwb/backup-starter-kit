@@ -12,6 +12,7 @@ export function getLocalBusinessSchema(origin) {
 		"url": SITE.url,
 		"logo": origin + BUSINESS.logo,
 		"image": origin + BUSINESS.logo,
+		"whatsAppUrl": BUSINESS.whatsAppUrl,
 		"email": BUSINESS.email,
 		"telephone": BUSINESS.phoneForTel,
 		"address": {
